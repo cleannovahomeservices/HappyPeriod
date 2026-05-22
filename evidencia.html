@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>La evidencia · HappyPeriod</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Georgia:wght@400;700&family=Crimson+Text:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --lav:#DAD0F3;
+      --aqua:#66C7C9;
+      --coral:#E56C61;
+      --sand:#E8D4CA;
+
+      --ink:#1f1f24;
+      --muted:#565664;
+      --paper:#fffdf8;
+
+      --max: 980px;
+    }
+
+    *{ box-sizing:border-box; }
+    body{
+      margin:0;
+      color:var(--ink);
+      font-family: "Crimson Text", Georgia, serif;
+      font-size: 18px;
+      line-height: 1.7;
+      background: var(--paper);
+    }
+    .wrap{ max-width: var(--max); margin:0 auto; padding: 0 18px; }
+
+    header{
+      background: linear-gradient(#ffffff, #fbfaf6);
+      border-bottom: 3px double rgba(31,31,36,.20);
+      padding: 18px 0 12px;
+    }
+    .top{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      flex-wrap:wrap;
+      justify-content:space-between;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+    }
+    .brand img{
+      width: 80px;
+      height: auto;
+      border: 0;
+      border-radius: 0;
+      background: transparent;
+      padding: 0;
+      display:block;
+    }
+    .brand h1{
+      margin:0;
+      font-family: Georgia, "Crimson Text", serif;
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: .2px;
+    }
+    .brand .sub{
+      margin-top: 2px;
+      font-size: 16px;
+      color: #2a7a7b;
+      font-style: italic;
+    }
+    .brand a.brand-link{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    nav{
+      display:flex;
+      gap: 10px;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+    }
+    nav a{
+      color: #0645AD;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      font-weight: 700;
+      padding: 6px 8px;
+      border: 1px solid transparent;
+    }
+    nav a:hover{
+      background: rgba(218,208,243,.30);
+      border-color: rgba(31,31,36,.16);
+    }
+
+    section{ padding: 22px 0; }
+    h2{
+      margin: 0 0 6px;
+      font-family: Georgia, "Crimson Text", serif;
+      font-size: 30px;
+      font-weight: 700;
+    }
+    h3{
+      margin: 14px 0 6px;
+      font-family: Georgia, "Crimson Text", serif;
+      font-size: 22px;
+      font-weight: 700;
+    }
+    p{ margin: 0 0 12px; color: var(--muted); }
+    p strong{ color: var(--ink); }
+
+    .btn{
+      display:inline-block;
+      font-family: Georgia, serif;
+      font-weight: 700;
+      font-size: 16px;
+      color: #1e1e22;
+      text-decoration:none;
+      padding: 10px 14px;
+      border-radius: 6px;
+      border: 1px solid rgba(31,31,36,.35);
+      background: linear-gradient(#ffffff, #eae8e1);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.9);
+    }
+    .btn:hover{
+      background: linear-gradient(#ffffff, #dddacf);
+    }
+    .btn.primary{
+      background: linear-gradient(#e9fbfb, #bfe8e9);
+      border-color: rgba(42,122,123,.45);
+    }
+    .btn.primary:hover{
+      background: linear-gradient(#f3ffff, #aee0e2);
+    }
+
+    sup.refnum{
+      font-size: 0.72em;
+      line-height: 0;
+      vertical-align: super;
+    }
+    sup.refnum a{
+      color: #0645AD;
+      text-decoration: none;
+      font-weight: 700;
+      padding: 0 1px;
+    }
+    sup.refnum a:hover{ text-decoration: underline; }
+
+    .refs{
+      padding-left: 22px;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.55;
+    }
+    .refs li{
+      margin-bottom: 10px;
+    }
+    .refs li:target{
+      background: rgba(255, 243, 153, .45);
+    }
+
+    .evidence h4{
+      margin: 14px 0 6px;
+      font-family: Georgia, "Crimson Text", serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--ink);
+      font-style: italic;
+    }
+
+    .back-row{
+      margin: 6px 0 10px;
+    }
+
+    footer{
+      padding: 18px 0 26px;
+      border-top: 3px double rgba(31,31,36,.20);
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    @media (max-width: 720px){
+      .top{ justify-content:flex-start; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="wrap">
+      <div class="top">
+        <div class="brand">
+          <a class="brand-link" href="index.html">
+            <img src="logo.png" alt="Logo HappyPeriod">
+            <div>
+              <h1>HappyPeriod</h1>
+              <div class="sub">cambiando las reglas</div>
+            </div>
+          </a>
+        </div>
+
+        <nav aria-label="Navegación">
+          <a href="index.html#happyperiod">HappyPeriod</a>
+          <a href="index.html#equipo">Equipo</a>
+          <a href="evidencia.html">La evidencia</a>
+          <a href="index.html#contacto">Contacto</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <section class="evidence">
+    <div class="wrap">
+      <div class="back-row">
+        <a class="btn" href="index.html">&larr; Volver al inicio</a>
+      </div>
+
+      <h2>La evidencia: Experiencia y ciencia.</h2>
+
+      <p>A lo largo de 20 años impartiendo yoga y voz he sido testigo de los beneficios: el alivio del dolor, la paz y el bienestar general físico, mental y emocional que experimentan los estudiantes. Estos son resultados habituales.</p>
+
+      <p>Tal vez en un mundo complejo lo más relevante sea la sencillez de estas técnicas.</p>
+
+      <p>Para los que necesitan pruebas, la investigación científica va publicando los resultados medibles de todos estos beneficios y respalda la eficacia de las herramientas que usamos en el programa.</p>
+
+      <h3>El yoga y la voz como pilares</h3>
+
+      <p>El yoga reduce el dolor menstrual, el cortisol y regula el eje HP (Hipotalámico-Pituitario)<sup class="refnum"><a href="#ref-1">1</a></sup> regulando las hormonas clave.</p>
+
+      <p>La voz activa el nervio vago y aumenta la VFC (Variabilidad de la Frecuencia Cardíaca)<sup class="refnum"><a href="#ref-2">2</a></sup>. Un marcador de la salud del sistema nervioso autónomo; mayor VFC = mayor resiliencia al estrés.</p>
+
+      <p>También reduce la inflamación: CRP<sup class="refnum"><a href="#ref-3">3</a></sup> y Citoquinas<sup class="refnum"><a href="#ref-4">4</a></sup>.</p>
+
+      <p><strong>CRP</strong> — Proteína C Reactiva, es un marcador sanguíneo de inflamación sistémica; los niveles elevados indican inflamación activa.</p>
+
+      <p><strong>Citoquinas</strong> — es la palabra en español para <em>cytokines</em>, moléculas de señalización del sistema inmune asociadas a la inflamación.</p>
+
+      <h3>PILAR 1 — Kundalini Yoga: regulación del sistema nervioso y hormonal</h3>
+
+      <p>El dolor menstrual no ocurre en el vacío. En el creciente estrés crónico que observamos, vemos activo el eje HPA (hipotálamo-hipófisis-adrenal), elevando el cortisol, lo que amplifica la percepción del dolor y agrava la inflamación. El yoga actúa directamente sobre estos mecanismos: activación del sistema nervioso parasimpático mediante la respuesta de relajación, que contrarresta la activación del eje HPA inducida por el estrés.</p>
+
+      <p>Un estudio con 120 estudiantes de medicina encontró reducciones significativas tanto en el estrés percibido como en los niveles de cortisol en sangre tras 24 semanas de práctica.</p>
+
+      <h4>El yoga reduce directamente el dolor menstrual — con ensayos clínicos</h4>
+
+      <p>Un meta-análisis de ensayos clínicos aleatorizados concluye que el yoga tiene un efecto favorable sobre el dolor menstrual en mujeres con dismenorrea primaria, con un tamaño de efecto alto (diferencia de medias estandarizada de −2,09).</p>
+
+      <p>Un ensayo clínico aleatorio y controlado mostró que las intervenciones de yoga redujeron significativamente tanto la intensidad del dolor menstrual como el malestar general en estudiantes universitarias con dismenorrea primaria (p &lt; 0,001). <a href="https://clinicaltrials.gov/study/NCT04295954" target="_blank" rel="noopener noreferrer">clinicaltrials.gov/study/NCT04295954</a></p>
+
+      <h4>¿Por qué funciona el yoga en el dolor menstrual específicamente?</h4>
+
+      <p>El yoga mejora el flujo sanguíneo de la arteria uterina y la calidad de vida, y debe considerarse un enfoque de primera línea para el manejo de la dismenorrea primaria.</p>
+
+      <p>Adicionalmente, estudios muestran que ejercicios de respiración profunda como el pranayama son efectivos como tratamiento alternativo de la dismenorrea primaria, con una reducción significativa de la intensidad del dolor y su duración en el grupo experimental frente al grupo control.</p>
+
+      <h3>PILAR 2 — Terapia vocal: nervio vago, inflamación y dolor</h3>
+
+      <h4>La anatomía que lo explica</h4>
+
+      <p>Las vibraciones de cantar o tararear estimulan directamente las terminaciones nerviosas asociadas a la vía del nervio vago. Tararear es especialmente efectivo porque genera una vibración concentrada y sostenida que resuena en la cavidad nasal y la faringe, donde se localizan las ramas del nervio vago. Esta acción mecánica sobre los músculos laríngeos es una forma de neuromodulación no invasiva que promueve la actividad del sistema nervioso parasimpático.</p>
+
+      <h4>Evidencia directa: voz → HRV → antiinflamatorio</h4>
+
+      <p>Estudios sobre la práctica yóguica del canto han demostrado su efectividad para aumentar la variabilidad de la frecuencia cardíaca (HRV) y promover el equilibrio autonómico. Del mismo modo, la práctica del Bhramari pranayama (respiración del zumbido) también impacta positivamente en el HRV y el tono vagal.</p>
+
+      <p>La investigación muestra que cantar aumenta el HRV, un marcador clave del tono vagal y la salud autonómica. La activación vagal puede reducir la inflamación sistémica a través de vías antiinflamatorias, y se están desarrollando dispositivos médicos para tratar enfermedades inflamatorias usando este mismo mecanismo.</p>
+
+      <h4>Reducción de inflamación — el vínculo directo con el dolor menstrual</h4>
+
+      <p>Un ensayo clínico en pacientes con artritis psoriásica demostró que la estimulación del nervio vago produjo una reducción del 20% en la proteína C reactiva (marcador de inflamación) y una disminución de citoquinas proinflamatorias. Este es exactamente el mismo tipo de inflamación (prostaglandinas, citoquinas) que genera el dolor menstrual.</p>
+
+      <p>Las técnicas individuales — respiración lenta, ejercicios vocales — están bien respaldadas por la investigación fisiológica. Activan el nervio vago a través de vías anatómicas conocidas y sus efectos calmantes son medibles a través de la variabilidad de la frecuencia cardíaca.</p>
+
+      <p>Esto es importante saberlo: los efectos son reales y medibles, aunque el debate sobre el marco teórico completo de la teoría polivagal sigue abierto en la comunidad científica.</p>
+
+      <h3>Referencias</h3>
+      <ol class="refs">
+        <li id="ref-1">
+          Kim SD. <em>Complement Ther Clin Pract.</em> 2019;36:94-99. DOI: 10.1016/j.ctcp.2019.06.006 — PMID: 31383452<br>
+          Yang NY &amp; Kim SD. <em>J Altern Complement Med.</em> 2016;22(9):732-8. DOI: 10.1089/acm.2016.0058 — PMID: 27315239<br>
+          <em>Sports Med Open.</em> 2024. PMC1113983
+        </li>
+        <li id="ref-2">
+          <em>Int J Environ Res Public Health.</em> 2025. PMC12736704<br>
+          <em>Front Psychol.</em> 2020;11:2259. DOI: 10.3389/fpsyg.2020.02259
+        </li>
+        <li id="ref-3">
+          Inbaraj G et al. <em>J Clin Diagn Res.</em> 2022<br>
+          <em>Front Physiol.</em> 2020;11:762. DOI: 10.3389/fphys.2020.00762 — PMC7506073<br>
+          PMC9339901 (canto y VFC en pacientes de cardiología)
+        </li>
+        <li id="ref-4">
+          Koopman FA et al. <em>PNAS.</em> 2016;113(29):8284-8289. DOI: 10.1073/pnas.1605635113 — PMC4961187<br>
+          Genovese MC et al. <em>Mediators Inflamm.</em> 2021. PMC8175141<br>
+          <em>JAHA.</em> 2023. DOI: 10.1161/JAHA.123.030539
+        </li>
+      </ol>
+
+      <div class="back-row" style="margin-top:20px;">
+        <a class="btn primary" href="index.html">&larr; Volver al inicio</a>
+        <a class="btn" href="index.html#contacto" style="margin-left:8px;">Contacto</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <div>© <span id="year"></span> HappyPeriod · cambiando las reglas</div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
